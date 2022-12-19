@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#displayScreen {
+    width: 400px;
+    border: 1px solid black;
+    text-align: right;
+    padding: 5px;
+    margin: 10px;
+}
+
+h1 {
+    color: red;
+    padding: 5px;
+    margin: 10px;
+}
+
+#digitArea {
+    padding: 5px;
+    margin: 10px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #cbb0b0;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #C1C1C1;
+    border-radius: 4px;
+}
+
+.digit {
+    color: red;
+}
