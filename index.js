@@ -1,19 +1,9 @@
-const title = document.querySelector('h1')
-const p = document.querySelector('p')
-/** @type {HTMLParagraphElement | null} */
 const tempValue = document.querySelector('#tempValue')
-const buttons = document.querySelectorAll('button')
+const buttons = document.querySelectorAll('.button')
+const clearButton = document.querySelector('.clear-button')
 
-// console.log('title:', title?.textContent)
-//console.log('tempValue:', tempValue?.textContent)
-//console.log('buttons:', buttons)
 
-let result = null
-let lastSign = null;
-/**
- * type {String}
- */
-//let screen = '0'
+// let lastSign = null;
 
 const testSolve = solve("2+2x3x4")
 console.log('testSolve:', testSolve)
@@ -43,12 +33,10 @@ const handleChangeDigit = (value) => {
     
 }
 
-buttons.forEach(button => {
-    // console.log('button:', button.className)
-    const type = button.className
-    if (type === 'digit') button.addEventListener('click',  (ev) => handleChangeDigit(ev?.target?.value))
-    if (type === 'symbol') button.addEventListener('click', (ev) => handleChangeDigit(ev?.target?.value))
-    lastSign = '='
-});
-
+// Les evenements 
 document.addEventListener('keydown', handleKeyDown)
+clearButton.addEventListener("click", () => tempValue.textContent = "0")
+buttons.forEach(button => {
+    const type = button.className
+    button.addEventListener('click',  (ev) => handleChangeDigit(ev.target.value))
+});

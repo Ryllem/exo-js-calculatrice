@@ -11,6 +11,7 @@ const solve = (opsString) => {
     }
     
     const division = (opsReg) => {
+        console.log('opsReg:', opsReg)
         const operation = opsReg.split('÷');
         return (Number(operation[0]) / Number(operation[1]))
     }
@@ -21,8 +22,9 @@ const solve = (opsString) => {
     }
  
     const doMultiply = () => {
-        const hasMultiplyReg = /[0-9]{1,}x[0-9]{1,}/g
+        const hasMultiplyReg = /[0-9.]{1,}x[0-9.]{1,}/g
         const foundMultiplication = opsString.match(hasMultiplyReg)
+        console.log('foundMultiplication:', foundMultiplication)
         if (foundMultiplication) {
         opsString = opsString.replace(hasMultiplyReg, multiply(foundMultiplication[0]));
         // console.log('opsString:', opsString)
@@ -32,20 +34,20 @@ const solve = (opsString) => {
     }
 
     const doDivision = () => {
-        const hasDivisionReg = /[0-9]{1,}÷[1-9]{1,}/g
+        const hasDivisionReg = /[0-9.]{1,}÷[1-9.]{1,}/g
         const foundDivision = opsString.match(hasDivisionReg)
         // console.log('foundDivision:', foundDivision)
         if (foundDivision) {
             opsString = opsString.replace(hasDivisionReg, division(foundDivision[0]));
             // console.log('opsString:', opsString)
-            const stillHaveDivision = opsString.match(hasDivisionReg)
+            const stillHaveDivision = hasDivisionReg.test(opsString)
             if (stillHaveDivision) doDivision()
         }
         
     }
 
     const doAddition = () => {
-        const hasAdditionReg = /[0-9]{1,}\+[0-9]{1,}/g
+        const hasAdditionReg = /[0-9.]{1,}\+[0-9.]{1,}/g
         const foundAddition = opsString.match(hasAdditionReg)
         // console.log('foundAddition:', foundAddition)
         if (foundAddition) {
@@ -57,7 +59,7 @@ const solve = (opsString) => {
     }
 
     const doSoustraction = () => {
-        const hasSoustractionReg = /[0-9]{1,}\-[0-9]{1,}/g
+        const hasSoustractionReg = /[0-9.]{1,}\-[0-9.]{1,}/g
         const foundSoustraction = opsString.match(hasSoustractionReg)
         if (foundSoustraction) {
         opsString = opsString.replace(hasSoustractionReg, soustraction(foundSoustraction[0]));
@@ -73,5 +75,5 @@ const solve = (opsString) => {
     return opsString
 }
 
-module.exports = solve
+// module.exports = solve
 // solve("2+2x4x3-2-14÷2")

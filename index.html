@@ -9,30 +9,40 @@
     <title>Calculatrice</title>
 </head>
 <body>
-    <h1>Calculatrice</h1>
-    <div id="displayScreen">
-        <p id="tempValue">0</p>
-    </div>
-    <div id="digitArea">
-        <button class="digit" name="1" value="1">1</button>
-        <button class="digit" name="2" value="2">2</button>
-        <button class="digit" name="3" value="3">3</button>
-        <button class="digit" name="4" value="4">4</button>
-        <button class="digit" name="5" value="5">5</button>
-        <button class="digit" name="6" value="6">6</button>
-        <button class="digit" name="7" value="7">7</button>
-        <button class="digit" name="8" value="8">8</button>
-        <button class="digit" name="9" value="9">9</button>
-        <button class="digit" name="0" value="0">0</button>
+    
+    <div class="calculatrice">
+        <div class="brand">
+            <h2>Texas Instruments</h2>
+            <p>Number One</p>
+        </div>
         
+        <div id="displayScreen">
+            <p id="tempValue">0</p>
+        </div>
+        <div id="digitArea">
+            <button class="button digit digit-button" name="7" value="7">7</button>
+            <button class="button digit digit-button" name="8" value="8">8</button>
+            <button class="button digit digit-button" name="9" value="9">9</button>
+            <button class="button symbol" name="+" value="+">+</button>
+            <button class="button symbol" name="-" value="-">-</button>
+            <button class="button digit digit-button" name="4" value="4">4</button>
+            <button class="button button digit digit-button" name="5" value="5">5</button>
+            <button class="button digit digit-button" name="6" value="6">6</button>
+            <button class="button symbol" name="x" value="x">x</button>
+            <button class="button symbol" name="÷" value="÷">÷</button>
+            <button class="button digit digit-button" name="1" value="1">1</button>
+            <button class="button digit digit-button" name="2" value="2">2</button>
+            <button class="button digit digit-button" name="3" value="3">3</button>
+            
+            <button class="button symbol equal-button" name="=" value="=">=</button>
+            <button class="button digit digit-button" name="0" value="0">0</button>
+            <button class="button digit digit-button" name="." value=".">.</button>
+            <button class="clear-button digit digit-button" name="C" value="">C</button>
+            
+            
+        </div>
     </div>
-    <div id="sign">
-        <button class="symbol" name="+" value="+">+</button>
-        <button class="symbol" name="-" value="-">-</button>
-        <button class="symbol" name="x" value="x">x</button>
-        <button class="symbol" name="÷" value="÷">÷</button>
-        <button style="width: 50px;" class="symbol" name="=" value="=">=</button>
-    </div>
+    
     <script src="./myFunction.js"></script>
     <script src="./index.js"></script>
     

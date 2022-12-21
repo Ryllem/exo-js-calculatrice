@@ -3,39 +3,94 @@
     margin: 0px;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfadad;;
+}
+
 
 #displayScreen {
     width: 400px;
-    border: 1px solid black;
+    height: 60px;
+    border: 5px solid black;
+    box-shadow: 0px 0px 2px white;
     text-align: right;
     padding: 5px;
-    margin: 10px;
+    margin: 20px;
+    background-color: rgb(150, 172, 154);
+    border-radius: 8px;
 }
 
-h1 {
-    color: red;
-    padding: 5px;
-    margin: 10px;
+.brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    color: rgb(168, 183, 187);
+    margin-top: 40px;
+    padding: 0px;
 }
 
 #digitArea {
     padding: 5px;
-    margin: 10px;
+    margin: 50px;
     width: 400px;
+    height: 360px;
     border: 1px solid black;
-    border-radius: 4px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #cbb0b0;
+    box-shadow: 0px 0px 6px grey;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2px;
+    background-color: rgba(0, 10, 10, 0.5);
 }
 
 button {
     padding: 10px;
     margin: 5px;
-    background-color: #C1C1C1;
     border-radius: 4px;
+    font-size: 25px;
+    color: white;
+}
+
+
+.digit-button {
+    background-color: rgb(92, 105, 108);
 }
 
 .digit {
-    color: red;
+    color: white;
+}
+
+.symbol {
+    background-color: orange;
+    border-width: 3px;
+}
+
+.calculatrice {
+    background-color: rgb(37, 56, 61);
+    width: 500px;
+    height: 650px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 2px 2px black;
+}
+
+.equal-button {
+    background-color: salmon;
+    grid-column: 4 / 6;
+    grid-row: 3 / 5;
+    font-size: 40px;
+    color: white;
+    border-width: 5px;
+}
+
+#tempValue {
+    font-size: 50px;
+    line-height: 60px;
 }
