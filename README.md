@@ -2,7 +2,7 @@
 
 ----------------------
 
-__Notions apprises : __
+__Notions apprises :__
 
 * Regex
 * logique algorithmique
