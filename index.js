@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('.button')
 const clearButton = document.querySelector('.clear-button')
 
 
-const handleChange = (value) => { console.log("%c Start function", "color: red")
+const handleChange = (value) => {
     if (value === '*') value = 'x' // corrige le signe multiplier *
     if (value === '/') value = '÷' // corrige le signe diviser /
     let operationString = tempValue.textContent
