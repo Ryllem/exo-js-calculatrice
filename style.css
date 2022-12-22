@@ -74,6 +74,7 @@ button {
     background-color: rgb(37, 56, 61);
     width: 500px;
     height: 650px;
+    position: relative;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -93,4 +94,15 @@ button {
 #tempValue {
     font-size: 50px;
     line-height: 60px;
+}
+
+.modal {
+    position: absolute;
+    background-color: rgb(189, 71, 71);
+    padding: 20px;
+    border: 2px solid rgb(177, 150, 150);
+    bottom: 100px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
 }

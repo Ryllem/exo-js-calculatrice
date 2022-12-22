@@ -1,5 +1,10 @@
+/**
+ * 
+ * @param {String} opsString - Chaine de caractere représentant l'opération à effectuer
+ * @returns 
+ */
 const solve = (opsString) => {
-    
+
     const multiply = (opsReg) => {
         const operation = opsReg.split('x');
         return (Number(operation[0]) * Number(operation[1]))
@@ -24,7 +29,7 @@ const solve = (opsString) => {
     const doMultiply = () => {
         const hasMultiplyReg = /[0-9.]{1,}x[0-9.]{1,}/g
         const foundMultiplication = opsString.match(hasMultiplyReg)
-        console.log('foundMultiplication:', foundMultiplication)
+        // console.log('foundMultiplication:', foundMultiplication)
         if (foundMultiplication) {
         opsString = opsString.replace(hasMultiplyReg, multiply(foundMultiplication[0]));
         // console.log('opsString:', opsString)
@@ -34,7 +39,7 @@ const solve = (opsString) => {
     }
 
     const doDivision = () => {
-        const hasDivisionReg = /[0-9.]{1,}÷[1-9.]{1,}/g
+        const hasDivisionReg = /[0-9.]{1,}÷[0-9.]{1,}/g
         const foundDivision = opsString.match(hasDivisionReg)
         // console.log('foundDivision:', foundDivision)
         if (foundDivision) {
@@ -71,9 +76,10 @@ const solve = (opsString) => {
     doDivision()
     doAddition()
     doSoustraction()
+
+    const result = (opsString.length <= 13) ? opsString : opsString.slice(0, 13)
       
-    return opsString
+    return result
 }
 
-// module.exports = solve
-// solve("2+2x4x3-2-14÷2")
+module.exports = solve
